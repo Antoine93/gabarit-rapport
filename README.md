@@ -371,4 +371,4 @@ Template libre d'utilisation pour les étudiants de l'UQAC.
 
 ---
 
-**Bon courage avec vos rapports ! 🎓**
+**Bon courage avec vos rapports !**
