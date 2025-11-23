@@ -5,6 +5,7 @@ rapport/build/
 *.aux
 *.lof
 *.log
+*.lol
 *.lot
 *.fls
 *.out
