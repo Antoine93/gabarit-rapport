@@ -85,19 +85,6 @@ Toutes les métadonnées sont centralisées dans un seul fichier. Modifier ces v
 \newcommand{\assignmentDate}{Jour Mois Année}
 ```
 
-**Exemple rempli :**
-```latex
-\newcommand{\courseName}{Méthodes d'analyse de l'ingénieur}
-\newcommand{\courseCode}{8GEN455}
-\newcommand{\assignmentName}{Devoir 2}
-\newcommand{\authorName}{Larouche Tremblay, Antoine}
-\newcommand{\studentID}{LARA27019304}
-\newcommand{\professorName}{Imène Benkalai, Ph. D.}
-\newcommand{\universityName}{Université du Québec à Chicoutimi}
-\newcommand{\departmentName}{Département des sciences appliquées}
-\newcommand{\assignmentDate}{24 novembre 2025}
-```
-
 ### 2. Structure des Sections
 
 Chaque section template contient :
