@@ -349,9 +349,11 @@ pdflatex rapport.tex
 ## 📚 Ressources
 
 - [Documentation LaTeX (français)](https://www.latex-project.org/help/documentation/)
-- [Guide des symboles mathématiques](http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf)
 - [Documentation TikZ](https://tikz.dev/)
-- [Documentation Listings](http://mirrors.ctan.org/macros/latex/contrib/listings/listings.pdf)
+- [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)
+- [TeXdoc - Documentation en ligne](https://texdoc.org/)
+- [Detexify - Recherche de symboles LaTeX](https://detexify.kirelabs.org/)
+- [TeXample.net - Exemples TikZ](https://texample.net/)
 
 ## 🤝 Contribution
 
