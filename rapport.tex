@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{uqac}  % Charger le style personnalisé UQAC
+
+% Packages pour la bibliographie
+\usepackage[backend=biber, style=ieee]{biblatex}
+\addbibresource{references/references.bib}
+
+% Charger les variables globales
+\input{variables.tex}
+
+% Configuration des en-têtes et pieds de page
+\uqacheaders{\courseName}{\courseCode}
+
+% Métadonnées LaTeX
+\title{\courseName\\\courseCode\\\assignmentName}
+\author{\authorName}
+\date{\assignmentDate}
+
+\begin{document}
+
+	% Page de titre
+	\input{sections/1-page_titre/page_titre.tex}
+	\newpage
+
+	% Numerotation romaine pour les pages preliminaires
+	\pagenumbering{roman}
+
+	% Table des matières
+	\tableofcontents
+	\newpage
+
+	% Liste des figures
+	\listoffigures
+	\newpage
+
+	% Liste des tableaux
+	\listoftables
+	\newpage
+
+	% Liste des codes
+	\addcontentsline{toc}{section}{Liste des codes}
+	\lstlistoflistings
+	\newpage
+
+	% Numerotation arabe pour le contenu principal
+	\pagenumbering{arabic}
+
+	% Introduction
+	\input{sections/2-introduction/introduction.tex}
+	\newpage
+
+  	% Développement
+  	\input{sections/3-developpement/developpement.tex}
+	\newpage
+
+  	% Résultats
+  	\input{sections/4-resultats/resultats.tex}
+	\newpage
+
+	% Conclusion
+	\input{sections/5-conclusion/conclusion.tex}
+	\newpage
+
+	% Bibliographie
+	\nocite{*}
+	\printbibliography[heading=bibnumbered, title=Références]
+
+\end{document}

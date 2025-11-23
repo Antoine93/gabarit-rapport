@@ -1,0 +1,146 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{griffiths2017}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a00328547222c4a2a201442ee59dccfd}{%
+           family={Griffiths},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{fullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{fullhashraw}{a00328547222c4a2a201442ee59dccfd}
+      \strng{bibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorbibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authornamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorfullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorfullhashraw}{a00328547222c4a2a201442ee59dccfd}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4th}
+      \field{title}{Introduction to Electrodynamics}
+      \field{year}{2017}
+      \true{nocite}
+    \endentry
+    \entry{burden2015}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=087f2271a0786e7c8db8fd33785aed18}{%
+           family={Burden},
+           familyi={B\bibinitperiod},
+           given={Richard\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=4204928ced965b41fb12c0ed6d636f41}{%
+           family={Faires},
+           familyi={F\bibinitperiod},
+           given={J.\bibnamedelimi Douglas},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cengage Learning}%
+      }
+      \strng{namehash}{30f50a4be86ef6852f9a742a7e344186}
+      \strng{fullhash}{30f50a4be86ef6852f9a742a7e344186}
+      \strng{fullhashraw}{30f50a4be86ef6852f9a742a7e344186}
+      \strng{bibnamehash}{30f50a4be86ef6852f9a742a7e344186}
+      \strng{authorbibnamehash}{30f50a4be86ef6852f9a742a7e344186}
+      \strng{authornamehash}{30f50a4be86ef6852f9a742a7e344186}
+      \strng{authorfullhash}{30f50a4be86ef6852f9a742a7e344186}
+      \strng{authorfullhashraw}{30f50a4be86ef6852f9a742a7e344186}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{10th}
+      \field{title}{Numerical Analysis}
+      \field{year}{2015}
+      \true{nocite}
+    \endentry
+    \entry{maxwell1865}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=2ae389e06ba2d0f0f32ee7f909b8e672}{%
+           family={Maxwell},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima Clerk},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \strng{fullhash}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \strng{fullhashraw}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \strng{bibnamehash}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \strng{authorbibnamehash}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \strng{authornamehash}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \strng{authorfullhash}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \strng{authorfullhashraw}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Philosophical Transactions of the Royal Society of London}
+      \field{title}{A Dynamical Theory of the Electromagnetic Field}
+      \field{volume}{155}
+      \field{year}{1865}
+      \true{nocite}
+      \field{pages}{459\bibrangedash 512}
+      \range{pages}{54}
+    \endentry
+    \entry{numpy2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5d41e41313a1c6d48282954d2eae2421}{%
+           family={{NumPy Developers}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d41e41313a1c6d48282954d2eae2421}
+      \strng{fullhash}{5d41e41313a1c6d48282954d2eae2421}
+      \strng{fullhashraw}{5d41e41313a1c6d48282954d2eae2421}
+      \strng{bibnamehash}{5d41e41313a1c6d48282954d2eae2421}
+      \strng{authorbibnamehash}{5d41e41313a1c6d48282954d2eae2421}
+      \strng{authornamehash}{5d41e41313a1c6d48282954d2eae2421}
+      \strng{authorfullhash}{5d41e41313a1c6d48282954d2eae2421}
+      \strng{authorfullhashraw}{5d41e41313a1c6d48282954d2eae2421}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NumPy User Guide}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://numpy.org/doc/stable/user/
+      \endverb
+      \verb{url}
+      \verb https://numpy.org/doc/stable/user/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

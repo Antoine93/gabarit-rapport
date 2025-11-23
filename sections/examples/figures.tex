@@ -1,0 +1,143 @@
+% ============================================================
+% EXEMPLES DE FIGURES ET IMAGES
+% ============================================================
+
+\subsection*{Figures et images}
+
+\subsubsection*{Insérer une image simple}
+
+Pour insérer une image, utilisez l'environnement \texttt{figure} :
+
+\textbf{Code :}
+\begin{verbatim}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{chemin/image.png}
+  \caption{Description de l'image}
+  \label{fig:exemple1}
+\end{figure}
+\end{verbatim}
+
+\textbf{Formats supportés :} PNG, JPG, PDF, SVG (avec conversion)
+
+\subsubsection*{Contrôler la taille de l'image}
+
+Différentes façons de spécifier la taille :
+
+\begin{itemize}
+	\item \texttt{width=0.5\textbackslash textwidth} : 50\% de la largeur du texte
+	\item \texttt{width=8cm} : Largeur fixe de 8 cm
+	\item \texttt{height=6cm} : Hauteur fixe de 6 cm
+	\item \texttt{scale=0.75} : 75\% de la taille originale
+	\item \texttt{width=0.8\textbackslash textwidth, height=6cm, keepaspectratio} : Respecte le ratio
+\end{itemize}
+
+\textbf{Exemple :}
+\begin{verbatim}
+\includegraphics[width=0.8\textwidth, keepaspectratio]{image.png}
+\end{verbatim}
+
+\subsubsection*{Plusieurs images côte à côte}
+
+Pour placer plusieurs images sur la même ligne, utilisez \texttt{minipage} ou \texttt{subfigure} :
+
+\textbf{Méthode 1 : minipage}
+\begin{verbatim}
+\begin{figure}[H]
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{image1.png}
+    \caption{Première image}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{image2.png}
+    \caption{Deuxième image}
+  \end{minipage}
+\end{figure}
+\end{verbatim}
+
+\textbf{Méthode 2 : subfigure (avec package subcaption)}
+\begin{verbatim}
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{image1.png}
+    \caption{Sous-figure 1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/votre_image.png}
+    \caption{Sous-figure 2}
+  \end{subfigure}
+  \caption{Comparaison de deux résultats}
+  \label{fig:comparaison}
+\end{figure}
+\end{verbatim}
+
+\subsubsection*{Graphiques TikZ}
+
+Pour créer des diagrammes directement en LaTeX :
+
+\textbf{Exemple simple :}
+\begin{verbatim}
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw[->] (0,0) -- (4,0) node[right] {$x$};
+    \draw[->] (0,0) -- (0,3) node[above] {$y$};
+    \draw[blue, thick] (0,0) -- (3,2);
+    \fill[red] (3,2) circle (2pt);
+  \end{tikzpicture}
+  \caption{Graphique simple avec TikZ}
+  \label{fig:tikz1}
+\end{figure}
+\end{verbatim}
+
+\textbf{Diagramme de blocs :}
+\begin{verbatim}
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[node distance=2cm]
+    \node[draw, rectangle] (input) {Entrée};
+    \node[draw, rectangle, right of=input] (process) {Traitement};
+    \node[draw, rectangle, right of=process] (output) {Sortie};
+    \draw[->] (input) -- (process);
+    \draw[->] (process) -- (output);
+  \end{tikzpicture}
+  \caption{Diagramme de flux}
+  \label{fig:flux}
+\end{figure}
+\end{verbatim}
+
+\subsubsection*{Référencer une figure}
+
+Pour référencer une figure dans le texte :
+
+\begin{verbatim}
+Comme illustré à la Figure~\ref{fig:exemple1}, on observe...
+La Figure~\ref{fig:comparaison} montre clairement que...
+\end{verbatim}
+
+\textbf{Note :} Le \texttt{\textasciitilde} crée une espace insécable entre "Figure" et le numéro.
+
+\subsubsection*{Rotation d'image}
+
+Pour faire pivoter une image :
+
+\begin{verbatim}
+\includegraphics[width=0.5\textwidth, angle=90]{image.png}
+\end{verbatim}
+
+\subsubsection*{Bonnes pratiques}
+
+\begin{itemize}
+	\item Toujours utiliser des chemins relatifs : \texttt{images/fig1.png}
+	\item Préférer les formats vectoriels (PDF, SVG) pour les diagrammes
+	\item Utiliser PNG pour les captures d'écran, JPG pour les photos
+	\item Toujours ajouter une légende descriptive avec \texttt{\textbackslash caption}
+	\item Toujours ajouter un label avec \texttt{\textbackslash label} pour pouvoir référencer
+	\item Utiliser \texttt{[H]} du package \texttt{float} pour positionner exactement
+\end{itemize}

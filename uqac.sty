@@ -1,0 +1,167 @@
+% uqac.sty - Style personnalisé pour les documents UQAC
+\ProvidesPackage{uqac}
+
+% Packages de base
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[french]{babel}
+\RequirePackage{graphicx}
+\RequirePackage{float}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{caption}
+
+% Package pour ajouter les listes dans la table des matières
+\RequirePackage{tocbibind}
+
+% Packages pour les codes sources avec support UTF-8
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+\RequirePackage{listingsutf8}
+\RequirePackage{fancyvrb}
+
+% Bibliothèques requises
+\RequirePackage{color}
+\RequirePackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning,calc}
+\RequirePackage{titlesec}
+\RequirePackage{fancyhdr}
+
+% Couleurs UQAC
+\definecolor{uqacGreen}{RGB}{107,138,21}
+\definecolor{uqacGray}{RGB}{128,128,128}
+
+% Couleurs pour MATLAB
+\definecolor{matlabgreen}{RGB}{28,172,0}
+\definecolor{matlabblue}{RGB}{0,0,255}
+\definecolor{matlabpurple}{RGB}{170,55,241}
+\definecolor{matlaborange}{RGB}{255,128,0}
+\definecolor{matlabgray}{RGB}{128,128,128}
+\definecolor{matlabcomment}{RGB}{34,139,34}
+\definecolor{matlabtextcolor}{RGB}{0,0,0}
+\definecolor{matlabbg}{RGB}{255,255,255}
+
+% Configuration pour standardiser l'espace autour des figures et des codes
+\setlength{\intextsep}{10pt}
+\setlength{\textfloatsep}{10pt}
+\setlength{\floatsep}{10pt}
+\setlength{\abovecaptionskip}{5pt}
+\setlength{\belowcaptionskip}{5pt}
+
+% Renommer "Listing" en "Code" pour le français
+\renewcommand{\lstlistingname}{Code}
+\renewcommand{\lstlistlistingname}{Liste des codes}
+
+% Renommer "Table" en "Tableau" pour le français
+\addto\captionsfrench{%
+  \renewcommand{\tablename}{Tableau}%
+  \renewcommand{\listtablename}{Liste des tableaux}%
+}
+
+% Configuration pour le code MATLAB avec support des accents
+\lstset{
+	language=Matlab,
+	backgroundcolor=\color{matlabbg},
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{matlabblue},
+	stringstyle=\color{matlabpurple},
+	commentstyle=\color{matlabcomment},
+	numberstyle=\tiny\color{matlabgray},
+	breaklines=true,
+	breakatwhitespace=true,
+	numbers=left,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=4,
+	captionpos=b,
+	frame=single,
+	framesep=5pt,
+	framerule=0.5pt,
+	xleftmargin=5pt,
+	xrightmargin=5pt,
+	aboveskip=10pt,
+	belowskip=10pt,
+	morecomment=[l][\color{matlabcomment}]{\%},
+	morestring=[b]',
+	moredelim=[is][\color{black}]{$$}{$$},
+	morekeywords={ones, zeros, nan, inf, rand, randn, eye, diag, disp, error, warning, clear, load, save, help, who, whos, size, length, ndims, numel, reshape, repmat, squeeze, flipdim, flip, fliplr, flipud, rot90, find, end, sum, prod, cumsum, cumprod, sort, sortrows, min, max, mean, std, var, median, mode, diff, gradient, unique, union, intersect, setdiff, setxor, ismember, histogram, hist, subplot},
+  	literate=
+	{à}{{\`a}}1 {À}{{\`A}}1
+	{â}{{\^a}}1 {Â}{{\^A}}1
+	{é}{{\'e}}1 {É}{{\'E}}1
+	{è}{{\`e}}1 {È}{{\`E}}1
+	{ê}{{\^e}}1 {Ê}{{\^E}}1
+	{ë}{{\"e}}1 {Ë}{{\"E}}1
+	{î}{{\^i}}1 {Î}{{\^I}}1
+	{ï}{{\"i}}1 {Ï}{{\"I}}1
+	{ô}{{\^o}}1 {Ô}{{\^O}}1
+	{ù}{{\`u}}1 {Ù}{{\`U}}1
+	{û}{{\^u}}1 {Û}{{\^U}}1
+	{ü}{{\"u}}1 {Ü}{{\"U}}1
+	{ÿ}{{\"y}}1 {Ÿ}{{\"Y}}1
+	{ç}{{\c c}}1 {Ç}{{\c C}}1
+	{œ}{{\oe}}1 {Œ}{{\OE}}1
+	{æ}{{\ae}}1 {Æ}{{\AE}}1
+	{°}{{$^\circ$}}1
+	{±}{{$\pm$}}1
+	{²}{{$^2$}}1
+	{³}{{$^3$}}1
+	{µ}{{$\mu$}}1
+	{×}{{$\times$}}1
+	{÷}{{$\div$}}1
+	{≤}{{$\leq$}}1
+	{≥}{{$\geq$}}1
+	{≠}{{$\neq$}}1
+	{≈}{{$\approx$}}1
+	{∞}{{$\infty$}}1
+	{∑}{{$\sum$}}1
+	{∏}{{$\prod$}}1
+	{∫}{{$\int$}}1
+	{√}{{$\sqrt{}$}}1
+	{π}{{$\pi$}}1
+	{α}{{$\alpha$}}1
+	{β}{{$\beta$}}1
+	{γ}{{$\gamma$}}1
+	{δ}{{$\delta$}}1
+	{ε}{{$\epsilon$}}1
+	{θ}{{$\theta$}}1
+	{λ}{{$\lambda$}}1
+	{ρ}{{$\rho$}}1
+	{σ}{{$\sigma$}}1
+	{τ}{{$\tau$}}1
+	{φ}{{$\phi$}}1
+	{ω}{{$\omega$}}1
+	{Δ}{{$\Delta$}}1
+	{Σ}{{$\Sigma$}}1
+	{Π}{{$\Pi$}}1
+	{Ω}{{$\Omega$}}1
+}
+
+% Style des titres
+\titleformat{\section}
+{\color{uqacGreen}\normalfont\Large\bfseries}
+{\color{uqacGreen}\thesection}{1em}{}
+\titleformat{\subsection}
+{\color{uqacGreen}\normalfont\large\bfseries}
+{\color{uqacGreen}\thesubsection}{1em}{}
+
+% Commande pour configurer les en-têtes et pieds de page
+\newcommand{\uqacheaders}[2]{%
+	\pagestyle{fancy}
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0.4pt}
+	\fancyhead[L]{\color{uqacGreen}#1}
+	\fancyhead[R]{\color{uqacGreen}#2}
+	\fancyfoot[C]{\thepage}
+}
+
+% Commande pour le logo
+\newcommand{\uqaclogo}[1][0.2]{%
+	\begin{center}
+		\includegraphics[width=#1\textwidth]{sections/page_titre/img/uqac.svg}
+	\end{center}
+}
+
+\endinput
