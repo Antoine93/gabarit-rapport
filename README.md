@@ -2,7 +2,7 @@
 
 Template réutilisable pour la rédaction de rapports académiques à l'Université du Québec à Chicoutimi (UQAC).
 
-## 📁 Structure du Projet
+## Structure du Projet
 
 ```
 rapport/
@@ -11,7 +11,7 @@ rapport/
 ├── uqac.sty                    # Style UQAC (générique, ne pas modifier)
 ├── .vscode/
 │   └── settings.json          # Configuration VS Code (sortie build/)
-├── sections/                  # 📌 TEMPLATES GÉNÉRIQUES
+├── sections/                  # TEMPLATES GÉNÉRIQUES
 │   ├── 1-page_titre/
 │   ├── 2-introduction/
 │   ├── 3-developpement/
@@ -24,7 +24,7 @@ rapport/
 └── build/                     # Fichiers intermédiaires (généré automatiquement)
 ```
 
-## 🚀 Démarrage Rapide
+## Démarrage Rapide
 
 ### Pour un Nouveau Rapport
 
@@ -32,11 +32,14 @@ rapport/
 2. **Modifier `variables.tex`** avec vos informations :
    ```latex
    \newcommand{\courseName}{Nom du cours}
-   \newcommand{\courseCode}{CODE123}
-   \newcommand{\assignmentName}{Devoir X}
-   \newcommand{\authorName}{Votre Nom}
-   \newcommand{\studentID}{VOTREID}
-   \newcommand{\assignmentDate}{Date}
+   \newcommand{\courseCode}{Sigle du cours}
+   \newcommand{\assignmentName}{Nom du devoir}
+   \newcommand{\authorName}{Nom, Prénom}
+   \newcommand{\studentID}{Code permanent}
+   \newcommand{\professorName}{Nom du/de la professeur(e)}
+   \newcommand{\universityName}{Nom de l'université}
+   \newcommand{\departmentName}{Département}
+   \newcommand{\assignmentDate}{Jour Mois Année}
    ```
 3. **Remplir les sections** dans `sections/` en remplaçant les `TODO`
 4. **Compiler** avec VS Code ou la ligne de commande
@@ -53,17 +56,17 @@ rapport/
 
 #### Ligne de commande
 ```bash
-# Avec latexmk (recommandé)
-latexmk -pdf rapport.tex
-
 # Avec pdflatex
 pdflatex -output-directory=build rapport.tex
 biber build/rapport
 pdflatex -output-directory=build rapport.tex
 pdflatex -output-directory=build rapport.tex
+
+# Avec latexmk (avantage: pas besoin de compiler plusieurs fois)
+latexmk -pdf rapport.tex
 ```
 
-## 📝 Utilisation
+## Utilisation
 
 ### 1. Variables Globales (`variables.tex`)
 
@@ -196,7 +199,7 @@ Le Code~\ref{code:exemple} présente...
 Selon \cite{exemple2025}, les méthodes numériques...
 ```
 
-## 🎨 Style UQAC (`uqac.sty`)
+## Style UQAC (`uqac.sty`)
 
 Le fichier de style inclut automatiquement :
 
@@ -230,7 +233,7 @@ Le fichier de style inclut automatiquement :
 - `uqacGreen` : RGB(107, 138, 21) - Vert UQAC
 - `uqacGray` : RGB(128, 128, 128) - Gris
 
-## ⚙️ Configuration VS Code
+## Configuration VS Code
 
 Le fichier `.vscode/settings.json` configure :
 - Sortie dans `build/` (garde la racine propre)
@@ -278,7 +281,7 @@ Le fichier `.vscode/settings.json` configure :
 - Tous les fichiers intermédiaires vont dans `build/`
 - La bibliographie est automatiquement traitée
 
-## 📋 Workflow Recommandé
+## Workflow Recommandé
 
 ### Nouveau Devoir (Même Cours)
 1. Copier le dossier `rapport/`
@@ -299,7 +302,7 @@ Le fichier `.vscode/settings.json` configure :
 3. Placer les images dans `images/` (ou sous-dossier comme `images/logo/`)
 4. Ajouter les références dans `references/references.bib`
 
-## 🔧 Dépannage
+## Dépannage
 
 ### Erreur "Cannot find reference"
 **Cause :** Les labels référencés n'existent pas encore.
@@ -346,7 +349,7 @@ pdflatex rapport.tex
 "args": ["--output-directory=build", "%DOCFILE%"]
 ```
 
-## 📚 Ressources
+## Ressources
 
 - [Documentation LaTeX (français)](https://www.latex-project.org/help/documentation/)
 - [Documentation TikZ](https://tikz.dev/)
@@ -355,14 +358,14 @@ pdflatex rapport.tex
 - [Detexify - Recherche de symboles LaTeX](https://detexify.kirelabs.org/)
 - [TeXample.net - Exemples TikZ](https://texample.net/)
 
-## 🤝 Contribution
+## Contribution
 
 Pour améliorer ce template :
 1. Modifier les fichiers dans `sections/` pour les templates
 2. Modifier `uqac.sty` pour le style
 3. Mettre à jour ce README
 
-## 📄 Licence
+## Licence
 
 Template libre d'utilisation pour les étudiants de l'UQAC.
 
