@@ -1,0 +1,25 @@
+# LaTeX build artifacts
+rapport/build/
+
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lol
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.bcf
+*.blg
+*.bbl
+*.run.xml
+*.synctex.gz
+*.fdb_latexmk
+
+# PDF outputs (optionnel - décommentez si vous ne voulez pas versionner les PDFs)
+# *.pdf

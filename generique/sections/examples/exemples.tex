@@ -1,0 +1,43 @@
+% ============================================================
+% FICHIER D'EXEMPLES - Template de Rapport LaTeX
+% ============================================================
+% Ce fichier contient des exemples d'utilisation de LaTeX
+% pour vous aider à rédiger vos rapports.
+%
+% Pour inclure ce fichier dans votre rapport (optionnel) :
+% \input{sections/examples/exemples.tex}
+%
+% Sinon, consultez-le simplement comme référence.
+% ============================================================
+
+\section*{Guide d'exemples LaTeX}
+
+Ce document présente des exemples d'utilisation de LaTeX pour vous aider à structurer vos rapports. Les sections suivantes montrent comment insérer :
+
+\begin{itemize}
+	\item Formules mathématiques (inline et display)
+	\item Tableaux et tableaux complexes
+	\item Figures et images
+	\item Code source MATLAB avec coloration syntaxique
+	\item Références bibliographiques
+\end{itemize}
+
+% Inclure les différents exemples
+\input{sections/examples/formules.tex}
+\input{sections/examples/tableaux.tex}
+\input{sections/examples/figures.tex}
+\input{sections/examples/code.tex}
+
+\subsection*{Références bibliographiques}
+
+Pour citer une référence, utilisez \texttt{\textbackslash cite\{clé\}}. Par exemple : "Selon \cite{exemple}, les méthodes numériques..."
+
+Pour ajouter une référence dans \texttt{references.bib} :
+\begin{verbatim}
+@article{exemple,
+  author = {Nom, Prénom},
+  title = {Titre de l'article},
+  journal = {Nom du journal},
+  year = {2025}
+}
+\end{verbatim}

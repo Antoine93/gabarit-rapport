@@ -1,0 +1,87 @@
+% ============================================================
+% EXEMPLES DE FORMULES MATHÉMATIQUES
+% ============================================================
+
+\subsection*{Formules mathématiques}
+
+\subsubsection*{Formules en ligne (inline)}
+
+Les formules en ligne s'insèrent directement dans le texte avec \texttt{\$...\$}.
+
+Exemples :
+\begin{itemize}
+	\item L'équation $E = mc^2$ est célèbre.
+	\item La solution est $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.
+	\item Pour tout $n \in \mathbb{N}$, on a $\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$.
+\end{itemize}
+
+\subsubsection*{Formules centrées (display mode)}
+
+Pour des formules importantes, utilisez l'environnement \texttt{equation} ou \texttt{\$\$...\$\$}.
+
+\textbf{Avec numérotation :}
+\begin{equation}
+	\int_{a}^{b} f(x) \, dx = F(b) - F(a)
+\end{equation}
+
+\begin{equation}
+	\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}
+\end{equation}
+
+\textbf{Sans numérotation :}
+\begin{equation*}
+	e^{i\pi} + 1 = 0
+\end{equation*}
+
+\subsubsection*{Systèmes d'équations}
+
+Utilisez l'environnement \texttt{align} pour aligner plusieurs équations :
+
+\begin{align}
+	x + y &= 5 \\
+	2x - y &= 1
+\end{align}
+
+Ou sans numérotation avec \texttt{align*} :
+
+\begin{align*}
+	\frac{\partial u}{\partial t} &= \alpha \frac{\partial^2 u}{\partial x^2} \\
+	u(0,t) &= u(L,t) = 0 \\
+	u(x,0) &= f(x)
+\end{align*}
+
+\subsubsection*{Matrices}
+
+Les matrices utilisent l'environnement \texttt{pmatrix}, \texttt{bmatrix}, ou \texttt{vmatrix} :
+
+\begin{equation}
+	A = \begin{bmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		a_{21} & a_{22} & a_{23} \\
+		a_{31} & a_{32} & a_{33}
+	\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+	\det(A) = \begin{vmatrix}
+		1 & 2 & 3 \\
+		4 & 5 & 6 \\
+		7 & 8 & 9
+	\end{vmatrix}
+\end{equation}
+
+\subsubsection*{Symboles mathématiques courants}
+
+\begin{itemize}
+	\item Fractions : $\frac{a}{b}$, $\dfrac{a}{b}$
+	\item Racines : $\sqrt{x}$, $\sqrt[n]{x}$
+	\item Exposants et indices : $x^2$, $x_i$, $x_i^2$
+	\item Sommes et produits : $\sum_{i=1}^{n}$, $\prod_{i=1}^{n}$
+	\item Intégrales : $\int$, $\iint$, $\iiint$, $\oint$
+	\item Limites : $\lim_{x \to \infty}$
+	\item Dérivées : $\frac{df}{dx}$, $\frac{\partial f}{\partial x}$
+	\item Vecteurs : $\vec{v}$, $\mathbf{v}$
+	\item Ensembles : $\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$, $\mathbb{C}$
+	\item Opérateurs logiques : $\forall$, $\exists$, $\in$, $\notin$, $\subseteq$
+	\item Flèches : $\rightarrow$, $\Rightarrow$, $\leftrightarrow$, $\Leftrightarrow$
+\end{itemize}

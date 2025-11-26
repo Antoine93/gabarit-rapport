@@ -1,0 +1,117 @@
+% ============================================================
+% EXEMPLES DE TABLEAUX
+% ============================================================
+
+\subsection*{Tableaux}
+
+\subsubsection*{Tableau simple}
+
+Un tableau simple avec bordures et légende :
+
+\begin{table}[H]
+	\centering
+	\caption{Résultats expérimentaux}
+	\label{tab:exemple1}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Essai} & \textbf{Température (°C)} & \textbf{Pression (kPa)} \\
+		\hline
+		1 & 25.3 & 101.2 \\
+		2 & 30.1 & 102.5 \\
+		3 & 28.7 & 100.8 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\textbf{Code :}
+\begin{verbatim}
+\begin{table}[H]
+  \centering
+  \caption{Résultats expérimentaux}
+  \label{tab:exemple1}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Essai} & \textbf{Temp.} & \textbf{Pression} \\
+    \hline
+    1 & 25.3 & 101.2 \\
+    \hline
+  \end{tabular}
+\end{table}
+\end{verbatim}
+
+\subsubsection*{Tableau sans bordures (style professionnel)}
+
+Les tableaux professionnels utilisent souvent moins de lignes :
+
+\begin{table}[H]
+	\centering
+	\caption{Comparaison des méthodes numériques}
+	\label{tab:exemple2}
+	\begin{tabular}{lcc}
+		\hline
+		\textbf{Méthode} & \textbf{Précision} & \textbf{Temps (s)} \\
+		\hline
+		Euler explicite & $10^{-3}$ & 0.12 \\
+		Runge-Kutta 4 & $10^{-6}$ & 0.45 \\
+		Adams-Bashforth & $10^{-5}$ & 0.28 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection*{Tableau avec alignement mixte}
+
+Colonnes alignées différemment (l = gauche, c = centre, r = droite) :
+
+\begin{table}[H]
+	\centering
+	\caption{Propriétés des matériaux}
+	\label{tab:exemple3}
+	\begin{tabular}{lrr}
+		\hline
+		\textbf{Matériau} & \textbf{Densité (kg/m³)} & \textbf{Module de Young (GPa)} \\
+		\hline
+		Acier & 7850 & 200 \\
+		Aluminium & 2700 & 69 \\
+		Cuivre & 8960 & 130 \\
+		Titane & 4506 & 116 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection*{Tableau avec cellules fusionnées}
+
+Pour fusionner des cellules, utilisez \texttt{\textbackslash multicolumn} :
+
+\begin{table}[H]
+	\centering
+	\caption{Résultats par catégorie}
+	\label{tab:exemple4}
+	\begin{tabular}{|l|c|c|c|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{Catégorie}} & \multicolumn{3}{c|}{\textbf{Résultats}} \\
+		\hline
+		& \textbf{Min} & \textbf{Moy} & \textbf{Max} \\
+		\hline
+		Série A & 12.3 & 15.7 & 18.9 \\
+		Série B & 10.1 & 14.2 & 17.5 \\
+		Série C & 11.8 & 16.3 & 20.1 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection*{Référencer un tableau}
+
+Pour référencer un tableau dans le texte, utilisez \texttt{\textbackslash ref\{label\}} :
+
+Le Tableau~\ref{tab:exemple1} présente les résultats expérimentaux.
+Comme on peut le voir dans le Tableau~\ref{tab:exemple2}, la méthode Runge-Kutta 4 offre la meilleure précision.
+
+\subsubsection*{Paramètres de positionnement}
+
+\begin{itemize}
+	\item \texttt{[H]} : Exactement ici (nécessite le package \texttt{float})
+	\item \texttt{[h]} : Approximativement ici
+	\item \texttt{[t]} : En haut de la page
+	\item \texttt{[b]} : En bas de la page
+	\item \texttt{[p]} : Sur une page dédiée aux flottants
+\end{itemize}
