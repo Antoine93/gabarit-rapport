@@ -1,0 +1,446 @@
+\documentclass[6pt,landscape]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{amsmath,amssymb,amsfonts}
+% Configuration compacte
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\columnsep}{0.2cm}
+\pagestyle{empty}
+% Titres compacts
+\titlespacing{\section}{0pt}{1pt}{0.5pt}
+\titlespacing{\subsection}{0pt}{0.5pt}{0pt}
+\titleformat{\section}{\normalfont\normalsize\bfseries}{\thesection}{0.5em}{}
+\titleformat{\subsection}{\normalfont\small\bfseries}{\thesubsection}{0.5em}{}
+% Listes ultra-compactes
+\setlist[itemize]{nosep, leftmargin=*, topsep=0pt, partopsep=0pt}
+\setlist[enumerate]{nosep, leftmargin=*, topsep=0pt, partopsep=0pt}
+% Tableaux compacts
+\renewcommand{\arraystretch}{0.75}
+
+\begin{document}
+\scriptsize
+
+\begin{multicols}{4}
+% ===============================================
+% PATTERN: Chapitre avec titre descriptif
+% ===============================================
+\section*{Chapitre N - NomDuChapitre}
+\subsection*{1. PATTERN DEFINITION AVEC FORMULE}
+
+{\bf Déf.}: Objet $\alpha$ de type $X$ satisfait propriété:
+$$f(x) = expression$$
+
+Texte explicatif $g(y) = autreExpr$ est le {\bf nom important}.
+
+{\bf Méthode}: 1. Faire action1; 2. Calculer chose; 3. Résoudre equation
+
+{\bf Ex.}: Déterminer propriété de $M = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$
+
+{\bf Sol.}:
+$$M - \alpha I = \begin{bmatrix} a-\alpha & b \\ c & d-\alpha \end{bmatrix}$$
+
+$$f(\alpha) = calcul1$$
+
+$$= calcul2$$
+
+$$= resultatFinal$$
+
+{\bf Factorisation}: $expr = formeDeveloppee = 0$
+
+{\bf Résultat}: $valeur_1 = res1, valeur_2 = res2$
+
+{\bf Pièges}: Erreur courante 1; erreur 2; erreur 3. {\bf Note spéciale}: information.
+\subsection*{2. PATTERN PROPRIETE SIMPLE}
+
+{\bf Prop.}: Si $var_i$ propriété de $A$, alors propriété de $B$ sont $fonction(var_i)$. Autre propriété conservée.
+
+{\bf Ex.}: $A$ a $var_1 = a, var_2 = b$. Question?
+
+{\bf Sol.}: $res_1 = calcul1$, $res_2 = calcul2$. Description: $resultatA$. Autre info: $resultatB$.
+
+{\bf Piège}: Conseil important!
+
+{\bf Appl.}: Utilisation converge vers $val = nombre$ ce qui implique: $conclusion = calcul \approx valNum$
+\subsection*{3. PATTERN ALGORITHME COMPLET}
+
+{\bf But}: Objectif principal de la méthode avec $variable_1$ et propriété.
+
+{\bf Algo}: Données $\vec{x}^0$ (condition), $param_0 = val$, $\epsilon$. Itérer: 1. $var^i = formule1$; 2. $var2^i = formule2$; 3. $res_i = formule3$; 4. Test $condition < \epsilon$ stop. Résultat: $res_i \to cible1$, $var^i \to cible2$.
+
+{\bf Ex.}: N iter., $M = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$, $\vec{v}^0 = vecteur^T$, $p_0 = val$.
+
+{\bf Iter. 1}: a) $var^1 = calcul = res^T$; b) $mesure = valeur$, $norm^1 = vect^T$; c) $autre = calc$, $p_1 = nombre = val$
+
+{\bf Iter. 2}: a) $var^2 = calcul = res^T$; b) $mesure = valeur$, $norm^2 = vect^T$; c) $p_2 \approx val$ converge vers $cible = val$.
+
+{\bf Vitesse}: Ratio $r = |rapport|$; petit $r$ = rapide; erreur $\propto r^k$. Ex.: $|a| = v1$, $|b| = v2$ donc $r = v3$ (qualificatif).
+
+{\bf Pièges}: Ne pas faire erreur1; oublier chose2; confondre concept3 et concept4.
+\subsection*{4. PATTERN METHODE VARIANTE}
+
+{\bf But}: Trouver la {\bf propriété spéciale} (en mode) de $X$.
+
+{\bf Principe}: Appliquer technique à $transformation(X)$ (sans calculer explicitement $transformation$).
+
+{\bf Vers quoi converge}: $resultat_1$ (description) = $relation$ (autre description)
+
+{\bf Algo}
+
+{\bf Différence avec autreMethode}: Au lieu de $step = simple$, on résout:
+$$equation\_complexe = membre\_droit$$
+(commentaire sur la différence)
+
+{\bf Etapes}:
+
+$var^i = formule1$; $res_i = formule2$; Résoudre $systeme$ (methode1, methode2, etc.); {\bf Test stop}: $condition < seuil$;
+
+{\bf Ex.}
+
+{\bf Éno.}: Effectuer N itérations de nomMethode pour $M = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ avec $\vec{v}^0 = \begin{bmatrix} x \\ y \end{bmatrix}$ et $p_0 = 0$.
+
+{\bf Sol.}:
+
+{\bf Iter. 1}
+
+{\bf 1}: Action
+$$var^0 = calcul = \begin{bmatrix} x \\ y \end{bmatrix}$$
+
+{\bf 2}: Résoudre $equation$
+$$\begin{bmatrix} a & b \\ c & d \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix}$$
+
+Par méthode:
+$$\vec{res}^1 = \begin{bmatrix} val1 \\ val2 \end{bmatrix}$$
+
+{\bf 3}: Calculer $metrique_1$
+$$metrique_1 = formuleCalcul = resultat$$
+
+{\bf Iter. 2}
+
+{\bf 1}: Action
+$$mesure = calcul$$
+
+{\bf 2}: Résoudre $equation2$
+
+{\bf 3}: Calculer $metrique_2$
+
+{\bf Convergence} (après M itérations): $var \approx valeurFinale$
+
+{\bf Déduction}: Conclusion recherchée de $X$ est:
+$$propriete = calcul \approx resultatNum$$
+
+{\bf Vitesse de convergence}
+
+Généralement {\bf COMPARATIF} que autreMethode!
+
+{\bf Ratio mesure}: $r = formuleRatio$
+
+{\bf Ex.}: Si $param_1 = v1$ et $param_2 = v2$, alors $r = v3$ donc convergence {\bf qualificatif} (N itérations)
+
+{\bf Pièges à éviter}
+
+$variableConvergee$ est la propriété de $A$; Vraie valeur de $B$: $formule = relation$;
+
+\subsection*{5. PATTERN CONCEPT COURT COMPACT}
+{\bf NomConcept}: $notation(X) = formule$. {\bf AutreConcept}: $condition$ ssi $critere < seuil$.
+{\bf Ex.}: $M = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ question? Propriété donc $res_1 = v1, res_2 = v2$. $mesure(M) = val < seuil$ donc {\bf Conclusion}.
+{\bf ATTENTION}: Point important dépend de $varA$, PAS $varB$. Calculer $formule$ et vérifier $condition$.
+
+{\bf Pièges à éviter}
+
+{\bf Confondre} conceptA de $X$ avec celui de $Y$ ou $Z$; {\bf Oublier} que $propriete$ peut être vraie même si condition2; {\bf Cas spécial}: Description cas = resultat;
+\subsection*{6. PATTERN SYSTEME AVEC JACOBIENNE}
+
+{\bf Système}: $\vec{x} = fonction(\vec{x})$
+
+{\bf NomConcept}: $\vec{r}$ tel que $\vec{r} = fonction(\vec{r})$
+
+{\bf Algo}: $\vec{x}^{k+1} = fonction(\vec{x}^k)$ (commentaire)
+
+{\bf Critère propriété}: $\vec{r}$ est qualificatif si $mesure(J(\vec{r})) < 1$
+
+où $J(\vec{r})$ est la {\bf matrice derivées} de $fonction$ évaluée en $\vec{r}$:
+
+$$J(\vec{x}) = \begin{bmatrix}
+\frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \cdots \\
+\frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & \cdots \\
+\vdots & \vdots & \ddots
+\end{bmatrix}$$
+
+{\bf Ex.}
+
+{\bf Éno.}: Soit le système:
+$$\begin{cases}
+x_1 = expr1(x_2) \\
+x_2 = expr2(x_1)
+\end{cases}$$
+
+{\bf a)} Trouver un objetRecherche
+
+{\bf b)} Vérifier propriété
+
+{\bf c)} Effectuer N iter depuis pointInit
+
+{\bf Sol.}:
+
+{\bf Partie a) Trouver objetRecherche}
+
+{\bf Astuce}: Chercher cas "facile" où $x_1 = x_2$
+
+Si $x_1 = x_2$, alors:
+$$x_1 = expression$$
+
+En appliquant opération:
+$$calcul1 \Rightarrow calcul2 \Rightarrow x_1 = val$$
+
+{\bf Vérification}:
+$x_1 = calcul = val$; $x_2 = calcul = val$;
+
+{\bf ObjetTrouve}: $\vec{r} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix}$
+
+{\bf Partie b) Vérifier propriété}
+
+{\bf 1}: Calculer la matrice derivées
+
+$$fonction(\vec{x}) = \begin{bmatrix} expr1 \\ expr2 \end{bmatrix}$$
+
+{\bf Dérivées partielles}:
+
+$$\frac{\partial f_1}{\partial x_1} = formule$$
+
+$$\frac{\partial f_1}{\partial x_2} = formule$$
+
+$$\frac{\partial f_2}{\partial x_1} = formule$$
+
+$$\frac{\partial f_2}{\partial x_2} = formule$$
+
+{\bf Jacobienne}: $J(\vec{x}) = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$. En (p1,p2): $J = \begin{bmatrix} v1 & v2 \\ v3 & v4 \end{bmatrix}$. $equationCarac = 0 \Rightarrow \lambda = \pm expr$, $|\lambda| = val < 1$ donc {\bf CONCLUSION}.
+
+{\bf Partie c) N itérations depuis ptInit}
+
+{\bf k=0}: $x_1^0 = v0$, $x_2^0 = v0$; {\bf k=1}: $x_1^1 = v1$, $x_2^1 = v1$; {\bf k=2}: $x_1^2 = v2$, $x_2^2 = v2$; {\bf k=3}: $x_1^3 = v3$, $x_2^3 = v3$; {\bf k=4}: $x_1^4 = v4$, $x_2^4 = v4$; {\bf k=5}: $x_1^5 = v5$, $x_2^5 = v5$
+
+{\bf Observation}: Description comportement convergeant vers (pt, pt) (explication)
+
+{\bf ATTENTION ERREURS IMPORTANTES!}
+
+{\bf ERREUR TYPE}: Description erreur; {\bf Oublier} calcul important; {\bf Erreur} dans étape (règle!); {\bf Confondre} conceptA ($cond < 1$) et conceptB ($cond > 1$);
+\subsection*{7. PATTERN METHODE ITERATIVE SYSTEME}
+
+{\bf Système}: $A\vec{x} = \vec{b}$
+
+{\bf Principe}: Isoler $x_i$ dans equation $i$ en utilisant valeurs de iteration {\bf qualificatif}
+
+{\bf Formule générale}:
+
+$$x_i^{k+1} = formuleGenerale$$
+
+{\bf Condition convergence}: Matrice $A$ à {\bf proprieteRequise}:
+
+$$|terme_{ii}| > sommeAutres \quad \forall i$$
+
+{\bf Ex.}
+
+{\bf Éno.}: Résoudre par nomMethode (N iter) depuis $\vec{x}^0 = vectInit^T$:
+
+$$\begin{aligned}
+c_1 x_1 + c_2 x_2 + c_3 x_3 &= b_1 \\
+c_4 x_1 + c_5 x_2 + c_6 x_3 &= b_2 \\
+c_7 x_1 + c_8 x_2 + c_9 x_3 &= b_3
+\end{aligned}$$
+
+{\bf Sol.}:
+
+{\bf Vérification préliminaire (nomTest)}
+
+{\bf Ligne 1}: Diag $|c_1| = v1$, Somme $|c_2| + |c_3| = v2$, Test: $v1 > v2$
+
+{\bf Ligne 2}: Diag $|c_5| = v1$, Somme $|c_4| + |c_6| = v2$, Test: $v1 > v2$
+
+{\bf Ligne 3}: Diag $|c_9| = v1$, Somme $|c_7| + |c_8| = v2$, Test: $v1 > v2$
+
+{\bf Conclusion test!}
+
+{\bf Formules iteration}
+
+$$\begin{cases}
+x_1^{k+1} = formule1 \\
+x_2^{k+1} = formule2 \\
+x_3^{k+1} = formule3
+\end{cases}$$
+
+{\bf Iter. 0 (initial)}
+
+$$\vec{x}^0 = \begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix}$$
+
+{\bf Iter. 1}
+
+$$x_1^1 = calcul = fraction \approx decimal$$
+
+$$x_2^1 = calcul = fraction = decimal$$
+
+$$x_3^1 = calcul = fraction \approx decimal$$
+
+$$\vec{x}^1 = \begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix}$$
+
+{\bf Iter. 2}
+
+$$x_1^2 = calcul$$
+$$= calcul2 = fraction \approx decimal$$
+
+$$x_2^2 = calcul = fraction \approx decimal$$
+
+$$x_3^2 = calcul$$
+$$= calcul2 = fraction \approx decimal$$
+
+$$\vec{x}^2 = \begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix}$$
+
+{\bf Iter. 3}
+
+$$x_1^3 \approx val, \quad x_2^3 \approx val, \quad x_3^3 \approx val$$
+
+$$\vec{x}^3 = \begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix}$$
+
+{\bf Convergence vers}: $\vec{x}^* = \begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix}$
+
+{\bf Cas casSpecial}
+
+{\bf Problème}: Si $terme_{ii} = 0$, on ne peut pas faire operation!
+
+{\bf Sol.}: {\bf Action} (description)
+
+{\bf Ex.}: Voir Exercice N (section suivante)
+
+{\bf Pièges à éviter}
+
+{\bf Methode1}: Description règle; {\bf Methode2}: Description différence;
+
+{\bf CasProbleme}: Ne PAS faire action! Action correcte.
+
+{\bf Erreur calcul}: Vérifier chaque étape (outil!)
+
+{\bf Oublier} de vérifier condition préalable
+\subsection*{8. PATTERN METHODE VARIANTE ITERATIVE}
+
+{\bf Principe}: Comme autreMethode, mais on utilise valeurs {\bf modificateur} (iteration $k+1$)
+
+{\bf Formule}:
+
+$$x_i^{k+1} = formuleModifiee$$
+
+{\bf Avantage}: Généralement {\bf COMPARATIF} que autreMethode (facteur× plus rapide typiquement)
+
+{\bf Condition convergence}: Identique à autreMethode (critere)
+
+{\bf Ex. (même système que autreMethode)}
+
+{\bf Formules iteration} (noter différence):
+
+$$\begin{cases}
+x_1^{k+1} = formule\_avec\_k \\
+x_2^{k+1} = formule\_mixte\_k\_kplus1 \\
+x_3^{k+1} = formule\_avec\_kplus1
+\end{cases}$$
+
+{\bf Iter.}: 1: $\vec{x}^1 = vect^T$; 2: $\vec{x}^2 = vect^T$; 3: $\vec{x}^3 \approx vect^T$. {\bf Conclusion en N iter!} (vs M+ autreMethode)
+
+{\bf Comparaison Methode1 vs Methode2}
+
+{\bf Methode1 Iter. N}: $(v1, v2, v3)$, Mesure $\sim p\%$
+
+{\bf Methode2 Iter. N}: $(v1, v2, v3)$, Mesure {\bf 0\%} (qualificatif!)
+
+{\bf Pièges à éviter}
+
+{\bf Erreur commune} consequence!; {\bf Conseil}: Description action; {\bf Erreur} description problème;
+\subsection*{9. PATTERN COMPARAISON INLINE}
+
+{\bf Critere Methode1}: Convergence si $condition1$; Propriété suffisante: descriptionProp; Vitesse: Qualificatif; Utilise $k+1$: Non; Coût iteration: Identique; Parallélisable: Oui
+
+{\bf Critere Methode2}: Convergence si $condition2$; Propriété suffisante: descriptionProp; Vitesse: {\bf Qualificatif} ($\sim$facteur× Methode1); Utilise $k+1$: Oui; Coût iteration: Identique; Parallélisable: Non (sequentiel)
+
+{\bf Ex.: NomExempleComplexe}
+
+{\bf Système initial} (PROBLEME):
+
+$$\begin{aligned}
+E_1: \quad equation1 &= val \\
+E_2: \quad equation2 &= val \\
+E_3: \quad equation3 &= val \\
+E_4: \quad equation4 &= val
+\end{aligned}$$
+
+{\bf Problème}: Ligne N a $terme = 0$ (description!)
+
+{\bf Vérification test}:
+
+{\bf L1}: Diag v1, Somme v2, Crit: Non; {\bf L2}: Diag v1, Somme v2, Crit: Non; {\bf L3}: Diag v1, Somme v2, Crit: Non; {\bf L4}: Diag v1, Somme v2, Crit: Non
+
+{\bf Conclusion lignes} pas propriété donc {\bf consequence}
+
+{\bf Sol.: NomSolution}
+
+{\bf Stratégie}: Placer le {\bf element important} de chaque equation sur position cible
+
+$E_1$: Max = $|val|$ (pour $var_N$) donc Ligne N; $E_2$: Max = $|val|$ (pour $var_M$) donc Ligne M; $E_3$: Max = $|val|$ (pour $var_K$) donc Ligne K; $E_4$: Max = $|val|$ (pour $var_J$) donc Ligne J;
+
+{\bf Système reordonne} (RESOLU):
+
+$$\begin{aligned}
+nouvelleEq1 &= val \\
+nouvelleEq2 &= val \\
+nouvelleEq3 &= val \\
+nouvelleEq4 &= val
+\end{aligned}$$
+
+{\bf Vérification test}:
+
+{\bf L1}: Diag v1, Somme v2, Crit: Oui; {\bf L2}: Diag v1, Somme v2, Crit: Oui; {\bf L3}: Diag v1, Somme v2, Crit: Oui; {\bf L4}: Diag v1, Somme v2, Crit: Oui
+
+{\bf Toutes lignes} satisfont propriété donc {\bf conclusion positive!}
+\subsection*{10. PATTERN PIEGES ERREURS LISTE}
+
+{\bf TOP N des erreurs à éviter}
+
+{\bf ErreurType1}: Description erreur; {\bf ErreurType2}: Confondre conceptA et conceptB (utiliser $notation1$ vs $notation2$); {\bf ErreurType3}: Confondre $mesureA$ avec $mesureB$; {\bf ErreurType4}: Oublier $relation = formule$; {\bf ErreurType5}: Oublier de faire action dans methode; {\bf ErreurType6}: Faire mauvaise action au lieu de bonne; {\bf ErreurType7}: Ne pas vérifier condition avant action; {\bf ErreurType8}: Oublier operation pour cas special; {\bf ErreurType9}: Conclure trop vite (faire au moins N iterations); {\bf ErreurType10}: Choisir mauvais element dans methode;
+
+{\bf Checklist}
+
+{\bf Toujours} action importante pour methode; {\bf Ne jamais} confondre methodeA et methodeB (detail!); {\bf Faire} action recommandée (plus clair); {\bf Vérifier} calculs avec outil; {\bf Attention} aux probleme fréquent (source erreur numero 1); {\bf Ne pas} perdre temps sur action inutile (conseil); {\bf Utiliser} ressources fournies avec examen;
+
+% ===============================================
+% PATTERN: Nouveau chapitre différent
+% ===============================================
+\section*{Chapitre M - AutreTheme}
+\subsection*{1. PATTERN THEOREME FONDAMENTAL}
+
+{\bf NomTheoreme fondamental}
+
+{\bf Théorème}: Par $n+1$ elements type $(x_0, y_0), \ldots, (x_n, y_n)$, il passe {\bf un unique} objet de degré $\leq n$.
+
+{\bf Implications pratiques}
+
+Methode1, Methode2, et Methode3 donnent le {\bf même résultat}; Seule la {\bf forme} diffère (type de formule); On peut vérifier propriété en appliquant transformation;
+
+{\bf Ex. examen}
+
+{\bf Question}: Les objets de Methode1 et Methode2 passant par N points sont-ils identiques?
+
+{\bf Réponse structurée}:
+REPONSE, ils sont identiques (même objet); Raison: theoreme propriété (N points donc unique objet degré $\leq$ M); Seule la formulation change (Methode1 vs Methode2); En appliquant transformation, on obtient même expression;
+
+{\bf Piège à éviter}
+
+Ne PAS confondre "même objet" et "même formule"; Ne PAS dire qu'ils donnent résultats différents;
+
+\end{multicols}
+
+\end{document}
